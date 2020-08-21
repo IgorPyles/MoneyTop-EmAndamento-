@@ -1,0 +1,76 @@
+<%- include ('partials/header.ejs')%>
+<%- include ('partials/navbar.ejs')%>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card border-0">
+                <div class="card-body">
+                  <h5 class="card-title display-3"><%= ativo %></h5>
+                  <p class="card-text display-5 font-weight-bold"><%= cotacao.name %></p>
+                  <p class="card-text display-5 text-secondary">ATUALIZADO: <%= cotacao.updated_at %></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <%  var variacao = Math.sign(cotacao.change_percent) %>
+                    <% if(variacao == 1){ %>
+                        <p class="card-text display-4 text-success">R$: <%= cotacao.price %></p>
+                        <p class="card-text display-4 text-success"><%= cotacao.change_percent %>%</p>
+                    <%}else{ %>
+                        <p class="card-text display-4 text-danger">R$: <%= cotacao.price %></p>
+                        <p class="card-text display-4 text-danger"><%= cotacao.change_percent %>%</p>
+                    <%} %>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6 col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>ABERTUTA</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>FECHAMENTO</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>Máxima</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>Mínima</th>
+                        <td>R$: </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6 col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>Média</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>Abertura</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>Máxima</th>
+                        <td>R$: </td>
+                    </tr>
+                    <tr>
+                        <th>Mínima</th>
+                        <td>R$: </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs')%>

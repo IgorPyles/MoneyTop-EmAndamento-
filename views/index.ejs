@@ -1,0 +1,31 @@
+<%- include ('partials/header.ejs')%>
+<%- include ('partials/navbar.ejs')%>
+<body>
+    <% if(resposta){ %>
+        <script>alert("Ticker não encontrado")</script>
+    <% } %>
+    <div class="container">
+        <br>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">DOLAR COMERCIAL</h3>
+                    <p class="card-text">R$ <%= cotacao.USD.buy %></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">BITCOIN</h3>
+                    <p class="card-text">R$ <%= cotacao.BTC.buy %></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">EURO</h3>
+                    <p class="card-text">R$ <%= cotacao.EUR.buy %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs')%>

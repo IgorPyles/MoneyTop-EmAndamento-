@@ -1,0 +1,97 @@
+<%- include ('partials/header.ejs')%>
+<%- include ('partials/navbar.ejs')%>
+<body>
+    <div class="container">
+        <div class="row">
+          <br>
+          <h3 class="display-2">MOEDAS</h3>
+          <br>
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">BOLSA</th>
+                  <th scope="col">LOCALIZAÇÃO</th>
+                  <th scope="col">PONTOS</th>
+                  <th scope="col">VARIAÇÃO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">DOLAR</th>
+                  <td><%= cotacao.currencies.USD.buy %></td>
+                  <td><%= cotacao.currencies.USD.sell %></td>
+                  <td><%= cotacao.currencies.USD.variation %> %</td>
+                </tr>
+                <tr>
+                  <th scope="row">EURO</th>
+                  <td><%= cotacao.currencies.EUR.buy %></td>
+                  <td><%= cotacao.currencies.EUR.sell %></td>
+                  <td><%= cotacao.currencies.EUR.variation %> %</td>
+                </tr>
+                <tr>
+                  <th scope="row">PESO ARG</th>
+                  <td><%= cotacao.currencies.ARS.buy %></td>
+                  <td>//</td>
+                  <td><%= cotacao.currencies.ARS.variation %> %</td>
+                </tr>
+                <tr>
+                  <th scope="row">LIBRA ESTER</th>
+                  <td><%= cotacao.currencies.GBP.buy %></td>
+                  <td>//</td>
+                  <td><%= cotacao.currencies.GBP.variation %> %</td>
+                </tr>
+                <tr>
+                  <th scope="row">BITCOIN</th>
+                  <td><%= cotacao.currencies.BTC.buy %></td>
+                  <td><%= cotacao.currencies.BTC.sell %></td>
+                  <td><%= cotacao.currencies.BTC.variation %> %</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <h3 class="display-2">PRINCIPAIS BOLSAS</h3>
+          <br>
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">BOLSA</th>
+                  <th scope="col">LOCALIZAÇÃO</th>
+                  <th scope="col">PONTOS</th>
+                  <th scope="col">VARIAÇÃO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><%= cotacao.stocks.IBOVESPA.name %></th>
+                  <td><%= cotacao.stocks.IBOVESPA.location %></td>
+                  <td><%= cotacao.stocks.IBOVESPA.points %></td>
+                  <td><%= cotacao.stocks.IBOVESPA.variation %> %</td>
+                </tr>
+                <tr>
+                  <th scope="row">EURO</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">PESO ARG</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">LIBRA ESTER</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs')%>

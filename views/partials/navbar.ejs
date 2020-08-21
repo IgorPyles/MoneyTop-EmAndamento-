@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/"><img src="/img/logo.png" width="40" height="40"></a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="navbar-brand text-success" href="/">MoneyTop</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-success" href="/">Ibovespa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" href="/moedas" >Moedas/Bolsas</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-success" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Info Day
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/">Maiores Altas</a>
+                    <a class="dropdown-item" href="/">Maiores Baixas</a>
+                    <hr>
+                    <a class="dropdown-item" href="/">Sobre</a>
+                </div>
+            </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/cotacao" method="POST">
+        <input class="form-control mr-sm-2 text-success" type="search" placeholder="Ticker" aria-label="Ticker" name="Ticker">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </nav>
